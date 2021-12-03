@@ -23,6 +23,11 @@ html {
 */
 
 #header {
+  position: fixed;
+  /* fix top header vao top 0 */
+  top: 0;
+  right: 0;
+  left: 0;
   height: 46px;
   background-color: #000;
 }
@@ -111,6 +116,9 @@ html {
 }
 
 #slider {
+  /* do position: fixed => header nam tren slider */
+  /* margin-top giup slider thut xuong dung vi tri cua no */
+  margin-top: 46px;
 }
 
 #content {
