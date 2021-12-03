@@ -4,3 +4,67 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+html {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+/*
+1. Vị trí
+2. Kích thước (width, height)
+3. Màu trí
+4. Kiểu dáng (kiểu chữ, hình tròn, vuông, ...)
+*/
+
+/*
+1. Từ ngoài vào trong
+2. Từ trên xuống dưới
+3. Tổng quan đến chi tiết
+*/
+
+#main {
+}
+
+#header {
+  height: 46px;
+  background-color: #000;
+}
+
+#nav {
+}
+
+#nav li {
+  display: inline-block;
+}
+
+#nav li a {
+  color: #fff;
+  list-style: none;
+  text-decoration: none;
+  /* can giua cho elem */
+  /* cho line-height = height cua the chua tu dong can giua */
+  /* vi chu luon dc can giua line-height */
+  line-height: 46px;
+  padding: 0 24px;
+  /* a la inline nen se khong co width vs height */
+  /* inline-block bien thanh block tang height cho the a */
+  display: inline-block;
+}
+
+#nav li:hover a {
+  color: #000;
+  background-color: #ccc;
+}
+
+#nav .subnav {
+  display: none;
+}
+
+#slider {
+}
+
+#content {
+}
+
+#footer {
+}
