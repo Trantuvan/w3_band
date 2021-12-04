@@ -22,6 +22,12 @@ html {
 3. Tổng quan đến chi tiết
 */
 
+.clear {
+  /* sua lai thuoc tinh float bi loi khi class cha */
+  /* khong bao het class con */
+  clear: both;
+}
+
 #header {
   position: fixed;
   /* fix top header vao top 0 */
@@ -150,7 +156,55 @@ html {
   margin-top: 25px;
 }
 
-#content {
+#content .content-section {
+  padding: 64px 0;
+  max-width: 800px;
+  /* can giua auto cho margin-left-right */
+  margin: 0 auto;
+}
+
+#content .section-heading {
+  font-size: 30px;
+  font-weight: 500;
+  letter-spacing: 4px;
+  text-align: center;
+}
+
+#content .section-sub-heading {
+  font-size: 15px;
+  text-align: center;
+  font-style: italic;
+  margin-top: 25px;
+  opacity: 0.6;
+}
+
+#content .about-text {
+  font-size: 15px;
+  text-align: justify;
+  margin-top: 25px;
+  line-height: 1.4rem;
+}
+
+#content .member-list {
+  margin-top: 47px;
+}
+
+#content .member-item {
+  float: left;
+  /* can giua 3 item*/
+  /* 100%/3 */
+  width: calc(100% / 3);
+  text-align: center;
+}
+
+#content .member-name {
+  font-size: 15px;
+}
+
+#content .member-img {
+  margin-top: 15px;
+  width: 154px;
+  border-radius: 4px;
 }
 
 #footer {
