@@ -135,7 +135,7 @@ html {
   /* su dung background-img de do anh tu padding --> content */
   /* giup anh dat duoc ti le 2:1 */
   padding-top: 50%;
-  background: url("/assets/img/chicago.jpg") top center / cover no-repeat;
+  background: url("/assets/img/silder/chicago.jpg") top center / cover no-repeat;
   position: relative;
 }
 
@@ -246,6 +246,69 @@ html {
   text-align: center;
   line-height: 24px;
   margin-top: -3px;
+}
+
+/* Places */
+.places-list {
+  /* margin-left-right âm */
+  /* trong bootrap giúp float thẳng với class trên */
+  margin: 32px -8px 0 -8px;
+  padding-bottom: 48px;
+}
+
+.place-item {
+  float: left;
+  /* dat 3 anh len 1 chieu ngang */
+  /* do width to nen lay 100% width /3*/
+  width: calc(100% / 3);
+  padding: 0 8px;
+}
+
+.place-img {
+  /* the img se khong theo width the chua no */
+  /* can set lai width: 100% */
+  width: 100%;
+  /* display:block bo thuoc tinh cua inline-block */
+  /* tao khoang cach anh */
+  display: block;
+}
+
+.place-img:hover {
+  opacity: 0.6;
+}
+
+.place-body {
+  background-color: #fff;
+  padding: 16px;
+  font-size: 15px;
+}
+
+.place-heading {
+  font-size: 15px;
+}
+
+.place-time {
+  margin-top: 15px;
+  color: #757575;
+}
+
+.place-desc {
+  margin-top: 15px;
+  line-height: 1.4rem;
+}
+
+.place-buy-btn {
+  display: inline-block;
+  margin-top: 15px;
+  color: #fff;
+  background-color: #000;
+  text-decoration: none;
+  padding: 11px 16px;
+}
+
+.place-buy-btn:hover {
+  background-color: #ccc;
+  color: #000;
 }
 
 /* Footer-section */
