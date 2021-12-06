@@ -22,16 +22,58 @@ html {
 3. Tổng quan đến chi tiết
 */
 
-.clear {
+/* Common */
+.text-white {
+  color: #fff !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.row {
+  margin-left: -8px;
+  margin-right: -8px;
+}
+
+.col {
+  float: left;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.row::after {
+  content: " ";
+  display: block;
   /* sua lai thuoc tinh float bi loi khi class cha */
   /* khong bao het class con */
   clear: both;
 }
 
-.text-white {
-  color: #fff !important;
+.col-1 {
+  width: 100%;
 }
 
+.col-2 {
+  width: calc(100% / 2);
+}
+
+.col-3 {
+  /* float: left; */
+  /* dat 3 anh len 1 chieu ngang */
+  /* do width to nen lay 100% width /3*/
+  width: calc(100% / 3);
+}
+
+.mt-8 {
+  margin-top: 8px !important;
+}
+
+.mt-16 {
+  margin-top: 16px !important;
+}
+
+/* Main */
 #header {
   position: fixed;
   /* fix top header vao top 0 */
@@ -193,14 +235,6 @@ html {
   margin-top: 47px;
 }
 
-#content .member-item {
-  float: left;
-  /* can giua 3 item*/
-  /* 100%/3 */
-  width: calc(100% / 3);
-  text-align: center;
-}
-
 #content .member-name {
   font-size: 15px;
 }
@@ -252,16 +286,10 @@ html {
 .places-list {
   /* margin-left-right âm */
   /* trong bootrap giúp float thẳng với class trên */
-  margin: 32px -8px 0 -8px;
-  padding-bottom: 48px;
-}
-
-.place-item {
-  float: left;
-  /* dat 3 anh len 1 chieu ngang */
-  /* do width to nen lay 100% width /3*/
-  width: calc(100% / 3);
-  padding: 0 8px;
+  /* margin: 32px -8px 0 -8px; */
+  /* padding-bottom: 48px; */
+  margin-top: 32px;
+  margin-bottom: 48px;
 }
 
 .place-img {
@@ -309,6 +337,42 @@ html {
 .place-buy-btn:hover {
   background-color: #ccc;
   color: #000;
+}
+
+/* Contact-section */
+.contact-content {
+  margin-top: 48px;
+}
+
+.contact-info {
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+/* i[class*="ti-"] select den prop co class ti-% ben trong tag i */
+.contact-info i[class*="ti-"] {
+  width: 30px;
+  /* cho display inline-block bien thanh block dat width dc */
+  display: inline-block;
+}
+
+.contact-form {
+  font-size: 15px;
+}
+
+.contact-form .form-control {
+  padding: 10px;
+  border: 1px solid #ccc;
+  width: 100%;
+  outline: none;
+}
+
+.contact-form .form-submit-btn {
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #000;
+  padding: 10px 16px;
+  float: right;
 }
 
 /* Footer-section */
