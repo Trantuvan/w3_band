@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Band</title>
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/responsive.css" />
     <link rel="stylesheet" href="./assets/fonts/themify-icons/themify-icons.css"
   </head>
   <body>
@@ -35,6 +36,11 @@
           <i class="search-icon ti-search"></i>
         </div>
         <!-- End: Search Button -->
+        <!-- Begin: Menu Button -->
+        <div id="mobile-menu" class="mobile-menu-btn">
+          <i class="menu-icon ti-menu"></i>
+        </div>
+        <!-- End: Menu Button -->
       </div>
 
       <div id="slider">
@@ -251,5 +257,32 @@
         <p class="copyright">Power by <a href="#">w3.css</a></p>
       </div>
     </div>
+    <script>
+      var header = document.getElementById("header");
+      var mobileMenu = document.getElementById("mobile-menu");
+      var headerHeight = header.clientHeight;
+
+      // Dong & mo mobile menu
+      mobileMenu.onclick = function () {
+        var isClose = header.clientHeight === headerHeight;
+        if (isClose) {
+          header.style.height = "auto";
+        } else {
+          header.style.height = null;
+        }
+      };
+
+      // Tự động đóng khi chọn menu
+      var menuItems = document.querySelectorAll("#nav li a[href*='#']");
+      for (let i = 0; i < menuItems.length; i++) {
+        var menuItem = menuItems[i];
+
+        // lang nghe onclick va cho header.style.height = null;
+        // header height: 46px; an list di
+        menuItem.onclick = function () {
+          header.style.height = null;
+        };
+      }
+    </script>
   </body>
 </html>

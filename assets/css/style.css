@@ -104,6 +104,8 @@ html {
   height: 46px;
   background-color: #000;
   z-index: 1;
+  /* responsive con khong loi ra khoi the cha */
+  overflow: hidden;
 }
 
 #nav {
@@ -148,7 +150,7 @@ html {
 }
 
 #nav > li:hover > a,
-#nav .subnav li:hover {
+#nav .subnav li:hover a {
   color: #000;
   background-color: #ccc;
 }
@@ -173,7 +175,15 @@ html {
   font-size: 14px;
 }
 
-#header .search-btn {
+#header .mobile-menu-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: none;
+}
+
+#header .search-btn,
+#header .mobile-menu-btn {
   float: right;
   padding: 0 21px;
 }
@@ -183,7 +193,16 @@ html {
   cursor: pointer;
 }
 
-#header .search-icon {
+#header .mobile-menu-btn:hover {
+  background-color: #ccc;
+}
+
+#header .mobile-menu-btn:hover .menu-icon {
+  color: #000;
+}
+
+#header .search-icon,
+#header .menu-icon {
   color: #fff;
   font-size: 20px;
   line-height: 46px;
