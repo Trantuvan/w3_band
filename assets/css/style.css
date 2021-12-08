@@ -224,8 +224,10 @@ html {
 }
 
 #content .content-section {
-  padding: 64px 0 112px;
-  max-width: 800px;
+  /* padding-left + right 16px chua lai .row margin-left+right -8px */
+  padding: 64px 16px 112px;
+  width: 800px;
+  max-width: 100%;
   /* can giua auto cho margin-left-right */
   margin: 0 auto;
 }
