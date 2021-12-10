@@ -148,7 +148,7 @@ html {
 }
 
 #nav > li:hover > a,
-#nav .subnav li:hover {
+#nav .subnav li:hover a {
   color: #000;
   background-color: #ccc;
 }
@@ -156,7 +156,7 @@ html {
 #nav .subnav {
   display: none;
   min-width: 160px;
-  position: absolute;
+  /* position: absolute; */
   background-color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   left: 0;
@@ -165,7 +165,7 @@ html {
 
 #nav .subnav a {
   color: #000;
-  padding: 0 12px;
+  padding: 1px 12px;
   line-height: 38px;
 }
 
@@ -173,7 +173,15 @@ html {
   font-size: 14px;
 }
 
-#header .search-btn {
+#header .mobile-menu-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: none;
+}
+
+#header .search-btn,
+#header .mobile-menu-btn {
   float: right;
   padding: 0 21px;
 }
@@ -183,7 +191,16 @@ html {
   cursor: pointer;
 }
 
-#header .search-icon {
+#header .mobile-menu-btn:hover {
+  background-color: #ccc;
+}
+
+#header .mobile-menu-btn:hover .menu-icon {
+  color: #000;
+}
+
+#header .search-icon,
+#header .menu-icon {
   color: #fff;
   font-size: 20px;
   line-height: 46px;
@@ -255,7 +272,7 @@ html {
 }
 
 #content .member-list {
-  margin-top: 47px;
+  margin-top: 32px;
 }
 
 #content .member-name {
@@ -311,7 +328,7 @@ html {
   /* trong bootrap giúp float thẳng với class trên */
   /* margin: 32px -8px 0 -8px; */
   /* padding-bottom: 48px; */
-  margin-top: 32px;
+  margin-top: 16px;
 }
 
 .place-img {
