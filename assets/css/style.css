@@ -222,7 +222,7 @@ html {
   /* su dung background-img de do anh tu padding --> content */
   /* giup anh dat duoc ti le 2:1 */
   padding-top: 50%;
-  background: url("/assets/img/silder/chicago.jpg") top center / cover no-repeat;
+  background: url("../img/silder/chicago.jpg") top center / cover no-repeat;
   position: relative;
 }
 
@@ -245,6 +245,7 @@ html {
 .text-desciption {
   font-size: 15px;
   margin-top: 25px;
+  text-shadow: 0 0 1px #000;
 }
 
 #content .content-section {
