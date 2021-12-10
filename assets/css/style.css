@@ -272,7 +272,7 @@ html {
 }
 
 #content .member-list {
-  margin-top: 47px;
+  margin-top: 32px;
 }
 
 #content .member-name {
@@ -328,7 +328,7 @@ html {
   /* trong bootrap giúp float thẳng với class trên */
   /* margin: 32px -8px 0 -8px; */
   /* padding-bottom: 48px; */
-  margin-top: 32px;
+  margin-top: 16px;
 }
 
 .place-img {
