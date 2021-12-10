@@ -45,6 +45,8 @@ html {
   padding: 11px 16px;
   border: none;
   text-align: center;
+  appearance: none;
+  -webkit-appearance: none;
 }
 
 .btn:hover {
@@ -161,7 +163,7 @@ html {
 #nav .subnav {
   display: none;
   min-width: 160px;
-  /* position: absolute; */
+  position: absolute;
   background-color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   left: 0;
@@ -384,6 +386,15 @@ html {
   width: 30px;
   /* cho display inline-block bien thanh block dat width dc */
   display: inline-block;
+}
+
+.contact-info a {
+  color: #101aef;
+  opacity: 0.8;
+}
+
+.contact-info a:hover {
+  opacity: 1;
 }
 
 .contact-form {
