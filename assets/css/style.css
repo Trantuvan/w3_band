@@ -463,6 +463,7 @@ html {
 .modal.open {
   /* class modal open */
   /* khong phai trong class modal co class open */
+  /* them class open modal hien len */
   display: flex;
 }
 
