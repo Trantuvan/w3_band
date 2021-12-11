@@ -475,6 +475,7 @@ html {
   min-height: 200px;
   /* position cho modal-close */
   position: relative;
+  animation: modalFadeIn ease 0.5s;
 }
 
 .modal-close {
@@ -550,4 +551,15 @@ html {
 
 .modal-footer a {
   color: #2196f3;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-140px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
