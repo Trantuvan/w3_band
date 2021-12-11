@@ -442,3 +442,112 @@ html {
 #footer .copyright a {
   color: rgba(0, 0, 0, 0.6);
 }
+
+/* Modal */
+.modal {
+  /* position: fixed; tuong quan vs trinh duyet*/
+  position: fixed;
+  /* 4 huong = 0 dich sat trinh duyet khong can width height */
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  justify-content: center;
+  align-items: center;
+  /* chinh flex ve none an di modal */
+  /* js hien thi cho flex */
+  display: none;
+}
+
+.modal.open {
+  /* class modal open */
+  /* khong phai trong class modal co class open */
+  /* them class open modal hien len */
+  display: flex;
+}
+
+.modal-container {
+  background-color: #fff;
+  width: 900px;
+  /* luon cach 2 ben man hinh 16px */
+  max-width: calc(100% - 32px);
+  min-height: 200px;
+  /* position cho modal-close */
+  position: relative;
+}
+
+.modal-close {
+  /* position cho container */
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: #fff;
+  padding: 12px;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.modal-close:hover {
+  opacity: 1;
+}
+
+.modal-header {
+  background: #009688;
+  height: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  color: #fff;
+}
+
+.modal-heading-icon {
+  margin-right: 16px;
+}
+
+.modal-body {
+  padding: 16px;
+}
+
+.modal-label {
+  display: block;
+  font-size: 15px;
+  color: #000;
+  margin-top: 12px;
+}
+
+.modal-input {
+  border: 1px solid #ccc;
+  font-size: 15px;
+  padding: 10px;
+  width: 100%;
+  margin: 8px 0 24px;
+}
+
+#buy-tickets {
+  color: #fff;
+  background-color: #009688;
+  width: 100%;
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: none;
+  /* chinh height cho button or input nen chinh padding vs font-size */
+  padding: 16px;
+  cursor: pointer;
+}
+
+#buy-tickets:hover {
+  opacity: 0.8;
+}
+
+.modal-footer {
+  padding: 16px;
+  float: right;
+  font-size: 15px;
+}
+
+.modal-footer a {
+  color: #2196f3;
+}
