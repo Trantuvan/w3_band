@@ -135,7 +135,9 @@
                   <p class="place-desc">
                     Praesent tincidunt sed tellus ut rutrum sed vitae justo.
                   </p>
-                  <a href="#" class="btn s-full-width">Buy Tickets</a>
+                  <button class="btn s-full-width js-buy-ticket">
+                    Buy Tickets
+                  </button>
                 </div>
               </div>
               <div class="col col-3 s-col-full mt-16">
@@ -150,7 +152,9 @@
                   <p class="place-desc">
                     Praesent tincidunt sed tellus ut rutrum sed vitae justo.
                   </p>
-                  <a href="#" class="btn s-full-width">Buy Tickets</a>
+                  <button class="btn s-full-width js-buy-ticket">
+                    Buy Tickets
+                  </button>
                 </div>
               </div>
               <div class="col col-3 s-col-full mt-16">
@@ -165,7 +169,9 @@
                   <p class="place-desc">
                     Praesent tincidunt sed tellus ut rutrum sed vitae justo.
                   </p>
-                  <a href="#" class="btn s-full-width">Buy Tickets</a>
+                  <button class="btn s-full-width js-buy-ticket">
+                    Buy Tickets
+                  </button>
                 </div>
               </div>
             </div>
@@ -259,9 +265,9 @@
     </div>
 
     <!-- Begin Modal -->
-    <div class="modal">
-      <div class="modal-container">
-        <div class="modal-close">
+    <div class="modal js-modal">
+      <div class="modal-container js-modal-container">
+        <div class="modal-close js-modal-close">
           <i class="ti-close"></i>
         </div>
         <!--Modal: Header -->
@@ -340,6 +346,39 @@
           }
         };
       }
+    </script>
+
+    <script>
+      const buyBtns = document.querySelectorAll(".js-buy-ticket");
+      const modal = document.querySelector(".js-modal");
+      const modalContainer = document.querySelector(".js-modal-container");
+      const modalClose = document.querySelector(".js-modal-close");
+
+      // Hien thi modal mua ve
+      function showBuyTickets() {
+        modal.classList.add("open");
+      }
+
+      // An modal mua ve
+      function hideBuyTicket() {
+        modal.classList.remove("open");
+      }
+
+      // Lap qua tung btn lang nghe hanh vi click
+      for (const buyBtn of buyBtns) {
+        buyBtn.addEventListener("click", showBuyTickets);
+      }
+
+      // lang nghe hinh vi click dau x
+      modalClose.addEventListener("click", hideBuyTicket);
+
+      // dung su kien noi bot de .modal khong tat
+      modalContainer.addEventListener("click", function (event) {
+        event.stopPropagation(modalContainer);
+      });
+
+      // click vao class modal se tat
+      modal.addEventListener("click", hideBuyTicket);
     </script>
   </body>
 </html>
